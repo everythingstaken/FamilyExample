@@ -50,9 +50,19 @@
 			],
 			"actions": [
 				{
-					"id": "reload",
-					"objectClass": "Browser",
-					"sid": 153100182170187
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 359370907254850
+				},
+				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 942507650154251
+				},
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 928659542235044
 				}
 			],
 			"sid": 467169914066316

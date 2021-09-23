@@ -1637,7 +1637,7 @@
 					"uid": 12,
 					"instanceVariables": {
 						"Cost": 25,
-						"SoundName": "horn"
+						"SoundName": "musicnote16"
 					},
 					"behaviors": {},
 					"world": {
@@ -1669,7 +1669,7 @@
 					"uid": 13,
 					"instanceVariables": {
 						"Cost": 1,
-						"SoundName": "horn"
+						"SoundName": "coin"
 					},
 					"behaviors": {},
 					"world": {
@@ -1701,7 +1701,7 @@
 					"uid": 16,
 					"instanceVariables": {
 						"Cost": 10,
-						"SoundName": "horn"
+						"SoundName": "pop"
 					},
 					"behaviors": {},
 					"world": {
@@ -3345,7 +3345,7 @@
 					"uid": 95,
 					"instanceVariables": {
 						"Cost": 10,
-						"SoundName": "horn"
+						"SoundName": "pop"
 					},
 					"behaviors": {},
 					"world": {
@@ -3377,7 +3377,7 @@
 					"uid": 96,
 					"instanceVariables": {
 						"Cost": 10,
-						"SoundName": "horn"
+						"SoundName": "pop"
 					},
 					"behaviors": {},
 					"world": {
@@ -3537,7 +3537,7 @@
 					"uid": 101,
 					"instanceVariables": {
 						"Cost": 1,
-						"SoundName": "horn"
+						"SoundName": "coin"
 					},
 					"behaviors": {},
 					"world": {
@@ -3569,7 +3569,7 @@
 					"uid": 102,
 					"instanceVariables": {
 						"Cost": 1,
-						"SoundName": "horn"
+						"SoundName": "coin"
 					},
 					"behaviors": {},
 					"world": {
@@ -3601,7 +3601,7 @@
 					"uid": 103,
 					"instanceVariables": {
 						"Cost": 1,
-						"SoundName": "horn"
+						"SoundName": "coin"
 					},
 					"behaviors": {},
 					"world": {
@@ -3633,7 +3633,7 @@
 					"uid": 104,
 					"instanceVariables": {
 						"Cost": 1,
-						"SoundName": "horn"
+						"SoundName": "coin"
 					},
 					"behaviors": {},
 					"world": {
@@ -3665,7 +3665,7 @@
 					"uid": 105,
 					"instanceVariables": {
 						"Cost": 1,
-						"SoundName": "horn"
+						"SoundName": "coin"
 					},
 					"behaviors": {},
 					"world": {
@@ -3697,7 +3697,7 @@
 					"uid": 106,
 					"instanceVariables": {
 						"Cost": 1,
-						"SoundName": "horn"
+						"SoundName": "coin"
 					},
 					"behaviors": {},
 					"world": {
@@ -3729,7 +3729,7 @@
 					"uid": 107,
 					"instanceVariables": {
 						"Cost": 1,
-						"SoundName": "horn"
+						"SoundName": "coin"
 					},
 					"behaviors": {},
 					"world": {
@@ -3761,7 +3761,7 @@
 					"uid": 108,
 					"instanceVariables": {
 						"Cost": 1,
-						"SoundName": "horn"
+						"SoundName": "coin"
 					},
 					"behaviors": {},
 					"world": {
@@ -3825,7 +3825,7 @@
 					"uid": 111,
 					"instanceVariables": {
 						"Cost": 1,
-						"SoundName": "horn"
+						"SoundName": "coin"
 					},
 					"behaviors": {},
 					"world": {
@@ -4035,7 +4035,7 @@
 					"instanceVariables": {
 						"FireTimeFam": 1,
 						"ShootAngleFam": 180,
-						"ShootSpeedFam": 100
+						"ShootSpeedFam": 500
 					},
 					"behaviors": {},
 					"world": {
