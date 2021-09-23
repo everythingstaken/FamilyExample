@@ -251,7 +251,7 @@
 		"appId": "",
 		"pixelRounding": true,
 		"useLoaderLayout": false,
-		"fullscreenMode": "letterbox-integer-scale",
+		"fullscreenMode": "off",
 		"fullscreenQuality": "low",
 		"viewportFit": "auto",
 		"backgroundColor": [
