@@ -1,0 +1,32 @@
+{
+	"name": "Enemies",
+	"plugin-id": "Sprite",
+	"sid": 901001095695258,
+	"instanceVariables": [
+		{
+			"name": "FireTimeFam",
+			"type": "number",
+			"desc": "",
+			"sid": 685465401669484
+		},
+		{
+			"name": "ShootAngleFam",
+			"type": "number",
+			"desc": "",
+			"sid": 494830760747853
+		},
+		{
+			"name": "ShootSpeedFam",
+			"type": "number",
+			"desc": "",
+			"sid": 170027603226048
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"EnemyDragon3",
+		"EnemyDragon2",
+		"EnemyDragon"
+	]
+}

@@ -1,0 +1,19 @@
+{
+	"name": "Doors",
+	"plugin-id": "Sprite",
+	"sid": 270271453326718,
+	"instanceVariables": [
+		{
+			"name": "WhatLevel",
+			"type": "string",
+			"desc": "",
+			"sid": 867136833176551
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Door2to1",
+		"Door1to2"
+	]
+}

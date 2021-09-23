@@ -1,0 +1,63 @@
+{
+	"name": "EnemyDragon",
+	"plugin-id": "Sprite",
+	"sid": 642820882993493,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "FireTime",
+			"type": "number",
+			"desc": "",
+			"sid": 115222574755806
+		},
+		{
+			"name": "ShootAngle",
+			"type": "number",
+			"desc": "",
+			"sid": 822810241304504
+		},
+		{
+			"name": "ShotSpeed",
+			"type": "number",
+			"desc": "",
+			"sid": 411539624625082
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2546839,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Fire",
+								"x": 0.5,
+								"y": 0.5
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 216810854942963,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

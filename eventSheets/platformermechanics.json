@@ -1,0 +1,365 @@
+{
+	"name": "PlatformerMechanics",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Money",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 210583546671497
+		},
+		{
+			"eventType": "comment",
+			"text": "Having a way to easily close or restart the browser is very useful in making web games, especially when playtesting.\nThese are things that I would comment out or delete in a final build."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 172473009454859,
+					"parameters": {
+						"key": 27
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "close",
+					"objectClass": "Browser",
+					"sid": 655381911543478
+				}
+			],
+			"sid": 693378515135066
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 184146084557933,
+					"parameters": {
+						"key": 82
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "reload",
+					"objectClass": "Browser",
+					"sid": 153100182170187
+				}
+			],
+			"sid": 467169914066316
+		},
+		{
+			"eventType": "comment",
+			"text": "The following two events set Kirby to be flipped depending on which button you press.\nThis is because Kirby and his collision box are separate. Keeping Kirby and the collision box separate is not obviously useful in this example game, but if I were making a more complex game, this is good practice."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 258477104880516,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "KirbySprite",
+					"sid": 616872922521361,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 279382472285121
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 584141115777331,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "KirbySprite",
+					"sid": 389387474251227,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 166981046049366
+		},
+		{
+			"eventType": "comment",
+			"text": "An event for things that always happen.\nThis sets the text at the top to the amount of cents Kirby has.\nIt also places a hit box on Kirby and places the Kirby sprite on the KirbyPlatformer object."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 806675199274062
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 978120222202690,
+					"parameters": {
+						"text": "Money"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "KirbySprite",
+					"sid": 396389045357970,
+					"parameters": {
+						"x": "KirbyPlatformer.X",
+						"y": "KirbyPlatformer.Y"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "KirbyHitBox",
+					"sid": 219261719915932,
+					"parameters": {
+						"x": "KirbyPlatformer.X",
+						"y": "KirbyPlatformer.Y-16"
+					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "KirbySprite",
+					"sid": 297577438069538
+				}
+			],
+			"sid": 287744436984635
+		},
+		{
+			"eventType": "comment",
+			"text": "When Kirby overlaps with a coin, it adds the correct amount of cents to the score."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "KirbySprite",
+					"sid": 144219274012384,
+					"parameters": {
+						"object": "Coins"
+					}
+				},
+				{
+					"id": "pick-nearestfurthest",
+					"objectClass": "Coins",
+					"sid": 555267087633526,
+					"parameters": {
+						"which": "nearest",
+						"x": "KirbySprite.X",
+						"y": "KirbySprite.Y"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 166059746896610,
+					"parameters": {
+						"variable": "Money",
+						"value": "Coins.Cost"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Coins",
+					"sid": 137991304784685
+				},
+				{
+					"id": "play-by-name",
+					"objectClass": "Audio",
+					"sid": 341531043735877,
+					"parameters": {
+						"folder": "sounds",
+						"audio-file-name": "Coins.SoundName",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 373979918647381
+		},
+		{
+			"eventType": "comment",
+			"text": "Event that makes enemies fire FireBalls every so many seconds.\nThis also sets the angle and speed of the bullets fired."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 979090923427286,
+					"parameters": {
+						"interval-seconds": "Enemies.FireTimeFam"
+					}
+				},
+				{
+					"id": "is-on-screen",
+					"objectClass": "Enemies",
+					"sid": 187833482442124
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Enemies",
+					"sid": 378352994753614,
+					"parameters": {
+						"object": "FireBall",
+						"layer": "0",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "FireBall",
+					"sid": 812126328009407,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "Enemies.ShootSpeedFam"
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "FireBall",
+					"sid": 924356204725023,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "Enemies.ShootAngleFam"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "FireBall",
+					"sid": 781758712152264,
+					"parameters": {
+						"angle": "Enemies.ShootAngleFam"
+					}
+				}
+			],
+			"sid": 777511120603105
+		},
+		{
+			"eventType": "comment",
+			"text": "FireBall killing Kirby."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "KirbyHitBox",
+					"sid": 341258922429134,
+					"parameters": {
+						"object": "FireBall"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "KirbyHitBox",
+					"sid": 266179431211426,
+					"parameters": {
+						"object": "Death",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "KirbySprite",
+					"sid": 145665857203048
+				},
+				{
+					"id": "destroy",
+					"objectClass": "KirbyPlatformer",
+					"sid": 200491426187072
+				},
+				{
+					"id": "destroy",
+					"objectClass": "KirbyHitBox",
+					"sid": 200653081163117
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 315046361715350,
+					"parameters": {
+						"audio-file": "mgsGameOver",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 185667416818954
+		},
+		{
+			"eventType": "comment",
+			"text": "This is something extra that I added to demonstrate how to move from one level or layout to another.\nCheck out the Family Instance Variables in the Door1to2 and Door2to1 object for more context."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "KirbySprite",
+					"sid": 383454116284421,
+					"parameters": {
+						"object": "Doors"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 392014091032498,
+					"parameters": {
+						"layout": "Doors.WhatLevel"
+					}
+				}
+			],
+			"sid": 315970823620004
+		}
+	],
+	"sid": 676430707862962
+}

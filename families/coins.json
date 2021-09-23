@@ -1,0 +1,27 @@
+{
+	"name": "Coins",
+	"plugin-id": "Sprite",
+	"sid": 999726883421517,
+	"instanceVariables": [
+		{
+			"name": "Cost",
+			"type": "number",
+			"desc": "",
+			"sid": 688642111714933
+		},
+		{
+			"name": "SoundName",
+			"type": "string",
+			"desc": "",
+			"sid": 175515136088257
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"CoinDime",
+		"CoinNickel",
+		"CoinPenny",
+		"CoinQuarter"
+	]
+}
