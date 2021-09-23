@@ -251,13 +251,13 @@
 		"appId": "",
 		"pixelRounding": true,
 		"useLoaderLayout": false,
-		"fullscreenMode": "off",
+		"fullscreenMode": "letterbox-integer-scale",
 		"fullscreenQuality": "low",
 		"viewportFit": "auto",
 		"backgroundColor": [
-			0,
-			0,
-			0,
+			1,
+			0.9921568627450981,
+			0.6392156862745098,
 			0
 		],
 		"splashColor": [
@@ -278,7 +278,7 @@
 		"scriptsType": "module",
 		"framerateMode": "vsync",
 		"compositingMode": "standard",
-		"sampling": "nearest",
+		"sampling": "bilinear",
 		"downscaling": "medium",
 		"renderingMode": "auto",
 		"anisotropicFiltering": "auto",
